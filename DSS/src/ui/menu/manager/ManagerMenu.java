@@ -4,12 +4,12 @@ import ui.menu.MainMenu;
 
 public class ManagerMenu extends MainMenu {
 //TODO
-	private static final String OPTIONS = "Manager Options \n -1 Consult Technicians Performance\n -2 Consult Employees\n -3 Consult Repairs of Technicians";
+	private static final String OPTIONS = "Manager Options \n -1 Consult Technicians Performance\n -2 Consult Employees\n -3 Consult Repairs of Technicians\n";
 
 	
 	@Override
 	public void run() {
-		while (super.option != "0") {
+		while (!super.option.equals("0")) {
 			display(OPTIONS);
 			readScreen();
 			switch (super.option) {
@@ -19,6 +19,7 @@ public class ManagerMenu extends MainMenu {
 			}
 
 			}
+			
 		}
 	}
 

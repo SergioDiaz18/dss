@@ -12,7 +12,7 @@ public class MainMenu implements Menu {
 
 	protected String option = "";
 
-	private ManagerMenu managerMenu = new ManagerMenu();
+	private MainMenu managerMenu;
 
 	@Override
 	public void display(String txt) {
@@ -22,11 +22,13 @@ public class MainMenu implements Menu {
 
 	@Override
 	public void run() {
+		managerMenu= new ManagerMenu();
 		while (this.option != "0") {
 			display(OPTIONS);
 			readScreen();
 			switch (this.option) {
 			case "1": {
+				
 				managerMenu.run();
 			}
 
@@ -38,10 +40,11 @@ public class MainMenu implements Menu {
 	@Override
 	public void readScreen() {
 		display("Option:");
+		this.option="";
 		while (option == "") {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			try {
-				this.option = reader.readLine();
+				this.option = reader.readLine().toString();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
