@@ -333,7 +333,7 @@ public class DataBaseFacadeImpl implements DataBaseFacade {
 
 	@Override
 	public void remove(Registration registration) {
-		registrations.remove(registrations);
+		registrations.remove(registration);
 		
 	}
 

@@ -1,8 +1,6 @@
 package model.store.payment;
 
 import model.Base_ID;
-import model.client.Client;
-import model.client.Device;
 import model.store.Employee;
 
 public class Registration extends Base_ID{

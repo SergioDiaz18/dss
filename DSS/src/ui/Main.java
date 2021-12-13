@@ -1,7 +1,5 @@
 package ui;
 
-import data.DataBaseFacadeImpl;
-import data.singleton.DataFactory;
 import ui.menu.MainMenu;
 
 public class Main {
