@@ -6,14 +6,14 @@ import model.store.Employee;
 public class Registration extends Base_ID{
 
 	private String deviceID;
-	private String clientID;
+	private String clientDNI;
 	
 	private Employee employee;
 
-	public Registration(String deviceID, String clientID, Employee employee) {
+	public Registration(String deviceID, String clientDNI, Employee employee) {
 		super();
 		this.deviceID = deviceID;
-		this.clientID = clientID;
+		this.clientDNI = clientDNI;
 		this.employee = employee;
 	}
 
@@ -21,8 +21,8 @@ public class Registration extends Base_ID{
 		return deviceID;
 	}
 
-	public String getClientID() {
-		return clientID;
+	public String clientDNI() {
+		return clientDNI;
 	}
 
 	public Employee getEmployee() {

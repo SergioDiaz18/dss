@@ -2,6 +2,7 @@ package business.client;
 
 import model.client.Client;
 import model.client.Device;
+import model.store.Technician;
 import model.store.repair.budget.Budget;
 
 public interface ClientFacade {
@@ -20,12 +21,12 @@ public interface ClientFacade {
 	 * @param device
 	 * @return the budget created
 	 */
-	public Budget registerBudget(Client client, Device device);
+	public Budget registerBudget(Client client, Device device, Technician technician);
 	
 	/**
 	 * Saves the client to the database
 	 * @param client
 	 */
-	public void createClient(Client client);
+	public void createClient(String dni, String name, String surname);
 
 }

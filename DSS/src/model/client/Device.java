@@ -4,20 +4,22 @@ import model.Base_ID;
 
 public class Device extends Base_ID{
 	
-	enum DEVICE_STATES{ registered, delivered }
+	enum DEVICE_STATES{ registered, delivered, abandoned }
 	
 	private String id;
 	private String description;
 	private String ownerID;
+	private String dataRepair;
 	
 	private DEVICE_STATES state;
 	
 	
-	public Device(String id, String description, String owner) {
+	public Device(String id, String description, String owner, String dataRepair) {
 		super();
 		this.id = id;
 		this.description = description;
 		this.ownerID = owner;
+		this.dataRepair = dataRepair;
 	}
 
 
@@ -34,8 +36,11 @@ public class Device extends Base_ID{
 	public String getOwner() {
 		return ownerID;
 	}
-
-
+	
+	public String dataRepair() {
+		return dataRepair;
+	}
+	
 	private void setId(String id) {
 		this.id = id;
 	}
@@ -50,6 +55,9 @@ public class Device extends Base_ID{
 		this.ownerID = owner;
 	}
 	
+	public void markAbandoned() {
+		state = DEVICE_STATES.abandoned;
+	}
 	
 	
 
